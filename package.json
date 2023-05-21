@@ -16,8 +16,8 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mongoose": "^7.2.0",
-    "nodemon": "^2.0.22",
     "morgan": "^1.10.0",
+    "nodemon": "^2.0.22",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
@@ -29,5 +29,9 @@
     "coveragePathIgnorePatterns": [
       "/node_modules/"
     ]
+  },
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "jest"
   }
 }

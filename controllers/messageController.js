@@ -8,6 +8,8 @@ module.exports={
         })
         .catch(error=>{
             res.status(404).send({error:error.message})
+            // res.status(404).send('there is no messages')
+
         })
     },
     createMessage:async(req, res)=>{
