@@ -7,4 +7,4 @@ const {
 }=require('../controllers/messageController')
 
 router.get('/',getAll)
-module.exports=router;
+module.exports=router
