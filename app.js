@@ -25,12 +25,14 @@ mongoose.connect(process.env.DB_CONNECTION, connectionParams)
     .catch((error) => {
         console.log(error.message);
     })
-    app.use(bodyParser.json())
+app.use(bodyParser.json())
 
-    app.use(morgan('dev'))
+app.use(morgan('dev'))
 
+
+const messageRouter = require('./routes/messageRouter')
+app.use('/messages', messageRouter)
 
 app.listen(port, () => {
     console.log(`my app is listening on http://localhost:${port}`);
 })
-
