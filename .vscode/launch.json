@@ -4,7 +4,7 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
+        
         {
             "type": "node",
             "request": "launch",
@@ -13,6 +13,17 @@
                 "<node_internals>/**"
             ],
             "program": "${COMMUNICATION}\\app.js"
-        }
+        },
+        {
+            "name": "Debug Message Test",
+            "type": "node",
+            "request": "launch",
+            "program": "${COMMUNICATION}/node_modules/.bin/jest",
+            "args": ["${COMMUNICATION}/message.test.js"],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "disableOptimisticBPs": true,
+            "cwd": "${COMMUNICATION}"
+          }
     ]
 }
