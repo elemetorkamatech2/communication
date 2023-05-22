@@ -10,5 +10,5 @@ const {
 
 router.get('/',getAll)
 router.post('/createMessage', createMessage)
-router.delete('/:messageId',Delete)
+router.delete('/:id',Delete)
 module.exports=router

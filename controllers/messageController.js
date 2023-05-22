@@ -13,10 +13,18 @@ module.exports = {
     Delete: (req, res) => {
         Message.findById(req.params.id)
             .then(message => {
+                console.log(req.params.id)
+                console.log(message)
                 if (!message) {
-                    return res.status(400).send({ message: "Message doesn't found" });
+                    res.status(400).send({ message: "Message doesn't found" });
                 }
-                return Message.deleteOne({ _id: req.params.id })
+                Message.deleteOne({ _id: req.params.id })
+                    .then(() => {
+                        res.status(200).send({ message: "The message with id:${req.params.id} has been deleted" });
+                    })
+                    .catch(error => {
+                        res.status(404).send({ error: error.message })
+                    })
             })
             .catch(error => {
                 res.status(404).send({ error: error.message })
