@@ -8,6 +8,7 @@ module.exports = {
             })
             .catch(error => {
                 res.status(404).send({ error: error.message })
+
             })
     },
     Delete: (req, res) => {
