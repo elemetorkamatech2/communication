@@ -8,7 +8,7 @@ const app = express()
 app.use("/messages", messageRouter)
 
 
-get
+
 describe('getAll function', () => {
   test('should return all messages', async () => {
     const messages = [{}];
@@ -96,3 +96,9 @@ describe('getAll function', () => {
 // //     const deletedMessage = await Message.findOne({ _id: message._id });
 
     } )
+
+    test('trt get function', async()=>{
+      const res = await request(app).get('/');
+      expect(res.statusCode).toBe(404);
+      // expect(res.send).toBe("error");
+    })
