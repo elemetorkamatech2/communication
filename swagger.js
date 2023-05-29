@@ -1,26 +1,40 @@
-const swaggerJSDoc = require('swagger-jsdoc')
-const swaggerUi = require('swagger-ui-express')
-
-const options = {
-    swaggerDefinition: {
-        openapi: '3.0.0',
-        info: {
-            title: 'communication multi service',
-            version: '1.0.0'
+const swaggerAutogen = require('swagger-autogen');
+const outputFile = './swagger_output.json';
+const endpointsFiles = ['./routes/messageRouter'];
+const doc = {
+  definitions: {
+    properties: {
+      addMessage: {
+        userCode: {
+          type: "string"
         },
-        servers: [
-            {
-                url: 'http://localhost:3000',
-                description: 'communication multi service server'
-            }
-
-        ]
-    },
-    apis: ['./routes/*.js']
+        subject: {
+          type: "string"
+        },
+        body: {
+          type: "string"
+        }
+      },
+    }
+  },
+  components: {
+    schemas: {
+      message: {
+        properties: {
+          userCode: {
+            type: "string"
+          },
+          subject: {
+            type: "string"
+          },
+          body: {
+            type: "string"
+          }
+        }
+      }
+    }
+  }
 }
-
-const specs = swaggerJSDoc(options)
-
-module.exports = (app) => {
-    app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs))
-}
+swaggerAutogen(outputFile, endpointsFiles, doc).then(() => {
+  require('./app');
+});
