@@ -6,9 +6,11 @@ const {
     getAll,
     createMessage,
     Delete
-}=require('../controllers/messageController')
+} = require('../controllers/messageController')
 
-router.get('/',getAll)
-router.post('/createMessage', createMessage)
-router.delete('/:id',Delete)
-module.exports=router
+
+module.exports = function (router) {
+    router.get('/', getAll)
+    router.post('/createMessage', createMessage)
+    router.delete('/:id', Delete)
+}

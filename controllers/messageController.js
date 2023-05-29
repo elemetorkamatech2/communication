@@ -20,7 +20,7 @@ module.exports = {
                 }
                 Message.deleteOne({ _id: req.params.id })
                     .then(() => {
-                        res.status(200).send({ message: "The message with id:${req.params.id} has been deleted" });
+                        res.status(200).send({ message: `The message with id:${req.params.id} has been deleted` });
                     })
                     .catch(error => {
                         res.status(404).send({ error: error.message })
@@ -31,12 +31,20 @@ module.exports = {
             })
     },
     createMessage: async (req, res) => {
+        /* #swagger.parameters['message'] = {
+                in: 'body',
+                required: true,
+               schema: { $ref: "#/components/schemas/message" }
+        }*/
         try {
-            let message = new Message(req.body);
+            // const message = req.body;
+            console.log("hello to creating")
+            const message = new Message(req.body);
             await message.save();
             res.status(200).send({ message: message });
         }
         catch (error) {
+            console.log("catch an error")
             res.status(400).send({ message: error.message });
         }
     }
