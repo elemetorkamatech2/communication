@@ -1,14 +1,14 @@
-const express = require('express')
+const express = require('express');
 
-const router = express.Router()
+const router = express.Router();
 
 const {
     getAll,
     createMessage,
     Delete
-}=require('../controllers/messageController')
+}=require('../controllers/messageController');
 
-router.get('/',getAll)
-router.post('/createMessage', createMessage)
-router.delete('/:id',Delete)
+router.get('/',getAll);
+router.post('/createMessage', createMessage);
+router.delete('/:id',Delete);
 module.exports=router
