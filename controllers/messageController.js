@@ -1,6 +1,7 @@
-var Message = require('../models/message.js');
+const Message = require('../models/message.js');
 
 module.exports = {
+
     getAll: (req, res) => {
         /*#swagger.tags=['messages'] */
         Message.find()

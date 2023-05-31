@@ -16,9 +16,12 @@ app.use(morgan("dev"));
 dotenv.config();
 app.use(cors());
 
+// Require and call the Swagger setup function
+require('./swagger')(app);
+
 const connectionParams = {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+	useNewUrlParser: true,
+	useUnifiedTopology: true,
 };
 
 app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
