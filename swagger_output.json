@@ -7,12 +7,21 @@
   },
   "host": "localhost:3000",
   "basePath": "/",
+  "tags": [
+    {
+      "name": "messages",
+      "description": "Operations for messages"
+    }
+  ],
   "schemes": [
     "http"
   ],
   "paths": {
     "/": {
       "get": {
+        "tags": [
+          "messages"
+        ],
         "description": "",
         "parameters": [],
         "responses": {
@@ -23,10 +32,11 @@
             "description": "Not Found"
           }
         }
-      }
-    },
-    "/createMessage": {
+      },
       "post": {
+        "tags": [
+          "messages"
+        ],
         "description": "",
         "parameters": [
           {
@@ -34,7 +44,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/message"
+              "$ref": "#/definitions/addMessage"
             }
           }
         ],
@@ -50,6 +60,9 @@
     },
     "/{id}": {
       "delete": {
+        "tags": [
+          "messages"
+        ],
         "description": "",
         "parameters": [
           {
@@ -74,59 +87,27 @@
     }
   },
   "definitions": {
-    "properties": {
+    "addMessage": {
       "type": "object",
       "properties": {
-        "addMessage": {
-          "type": "object",
-          "properties": {
-            "userCode": {
-              "type": "object",
-              "properties": {
-                "type": {
-                  "type": "string",
-                  "example": "string"
-                }
-              }
-            },
-            "subject": {
-              "type": "object",
-              "properties": {
-                "type": {
-                  "type": "string",
-                  "example": "string"
-                }
-              }
-            },
-            "body": {
-              "type": "object",
-              "properties": {
-                "type": {
-                  "type": "string",
-                  "example": "string"
-                }
-              }
-            }
-          }
+        "userCode": {
+          "type": "string",
+          "example": "string"
+        },
+        "subject": {
+          "type": "string",
+          "example": "string"
+        },
+        "body": {
+          "type": "string",
+          "example": "string"
         }
-      }
-    }
-  },
-  "components": {
-    "schemas": {
-      "message": {
-        "properties": {
-          "userCode": {
-            "type": "string"
-          },
-          "subject": {
-            "type": "string"
-          },
-          "body": {
-            "type": "string"
-          }
-        }
-      }
+      },
+      "required": [
+        "userCode",
+        "subject",
+        "body"
+      ]
     }
   }
 }

@@ -2,6 +2,7 @@ var Message = require('../models/message.js');
 
 module.exports = {
     getAll: (req, res) => {
+        /*#swagger.tags=['messages'] */
         Message.find()
             .then(messages => {
                 res.status(200).send(messages)
@@ -11,6 +12,7 @@ module.exports = {
             })
     },
     Delete: (req, res) => {
+        /*#swagger.tags=['messages'] */
         Message.findById(req.params.id)
             .then(message => {
                 console.log(req.params.id)
@@ -30,16 +32,18 @@ module.exports = {
                 res.status(404).send({ error: error.message })
             })
     },
+
     createMessage: async (req, res) => {
+        /*#swagger.tags=['messages'] */
+
         /* #swagger.parameters['message'] = {
                 in: 'body',
                 required: true,
-               schema: { $ref: "#/components/schemas/message" }
+            schema: { $ref: "#/definitions/addMessage" }
         }*/
         try {
-            // const message = req.body;
-            console.log("hello to creating")
-            const message = new Message(req.body);
+            const { userCode, subject, body } = req.body;
+            var message = new Message(req.body);
             await message.save();
             res.status(200).send({ message: message });
         }

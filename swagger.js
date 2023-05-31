@@ -2,37 +2,18 @@ const swaggerAutogen = require('swagger-autogen');
 const outputFile = './swagger_output.json';
 const endpointsFiles = ['./routes/messageRouter'];
 const doc = {
+  tags: [
+    {
+      name: 'messages',
+      description: 'Operations for messages'
+    }
+  ],
   definitions: {
-    properties: {
       addMessage: {
-        userCode: {
-          type: "string"
-        },
-        subject: {
-          type: "string"
-        },
-        body: {
-          type: "string"
-        }
-      },
-    }
-  },
-  components: {
-    schemas: {
-      message: {
-        properties: {
-          userCode: {
-            type: "string"
-          },
-          subject: {
-            type: "string"
-          },
-          body: {
-            type: "string"
-          }
-        }
+        $userCode: "string",
+        $subject: "string",
+        $body: "string"
       }
-    }
   }
 }
 swaggerAutogen(outputFile, endpointsFiles, doc).then(() => {
