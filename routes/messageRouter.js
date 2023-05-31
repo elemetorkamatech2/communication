@@ -8,9 +8,8 @@ const {
     Delete
 } = require('../controllers/messageController')
 
-
 module.exports = function (router) {
     router.get('/', getAll)
-    router.post('/createMessage', createMessage)
+    router.post('/', createMessage)
     router.delete('/:id', Delete)
 }
