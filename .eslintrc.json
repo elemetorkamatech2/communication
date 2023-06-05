@@ -12,18 +12,18 @@
         "ecmaVersion": "latest"
     },
     "rules": {
-        // "indent": [
-        //     "error",
-        //      "tab"
-        // ],
+        "indent": [
+            "error",
+             "space"
+        ],
         "linebreak-style": [
             "error",
             "windows"
         ],
-        "quotes":[
-            "error", 
-            "single"
-        ],
+        // "quotes":[
+        //     "error", 
+        //     "single"
+        // ],
         "semi":[
             "error", 
             "always"
