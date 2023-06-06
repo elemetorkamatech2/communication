@@ -22,10 +22,8 @@ app.use(morgan('dev'));
 dotenv.config();
 app.use(cors());
 
-require('./swagger')(app);
-
 const connectionParams = {
-  seNewUrlParser: true,
+  useNewUrlParser: true,
   useUnifiedTopology: true,
 };
 
