@@ -4,14 +4,15 @@ const morgan = require('morgan');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const logger = require('./logger');
 const swaggerUi = require('swagger-ui-express');
 const swaggerFile = require('./swagger_output.json');
+const logger = require('./logger');
+
 // const open =require('open')
 // const messageRouter = require("./routes/messageRouter");
 // const Message = require("./models/message");
 
-logger.error('hi')
+logger.error('hi');
 
 const app = express();
 const port = 3000;
@@ -34,7 +35,7 @@ require('./api/routes/messageRouter')(app);
 mongoose
   .connect(process.env.DB_CONNECTION, connectionParams)
   .then(() => {
-    logger.info("connect to mongoDB");
+    logger.info('connect to mongoDB');
   })
   .catch((error) => {
     logger.error(error.message);
@@ -42,18 +43,17 @@ mongoose
 
 // app.use("/messages", messageRouter);
 
+const server = app.listen(port, () => {
+  logger.info(`my app is listening on http://localhost:${port}`);
+  // open('http://localhost:3000/doc');
+});
 process.on('uncaughtException', (err) => {
   logger.fatal(err, 'uncaught exception detected');
   server.close(() => {
-    process.exit(1); 
+    process.exit(1);
   });
   setTimeout(() => {
     process.abort();
-  }, 1000).unref()
+  }, 1000).unref();
   process.exit(1);
-});
-
-const server = app.listen(port, () => {
-  logger.info(`my app is listening on http://localhost:${port}`);
-    // open('http://localhost:3000/doc');
 });
