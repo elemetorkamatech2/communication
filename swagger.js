@@ -1,26 +1,24 @@
-const swaggerJSDoc = require('swagger-jsdoc');
-const swaggerUi = require('swagger-ui-express');
+// eslint-disable-next-line import/no-extraneous-dependencies
+const swaggerAutogen = require('swagger-autogen');
 
-const options = {
-	swaggerDefinition: {
-		openapi: '3.0.0',
-		info: {
-			title: 'communication multi service',
-			version: '1.0.0',
-		},
-		servers: [
-			{
-				url: 'http://localhost:3000',
-				description: 'communication multi service server',
-			},
-
-		],
-	},
-	apis: ['./routes/*.js'],
+const outputFile = './swagger_output.json';
+const endpointsFiles = ['./api/routes/messageRouter'];
+const doc = {
+  tags: [
+    {
+      name: 'messages',
+      description: 'Operations for messages',
+    },
+  ],
+  definitions: {
+    addMessage: {
+      $userCode: 'string',
+      $subject: 'string',
+      $body: 'string',
+    },
+  },
 };
-
-const specs = swaggerJSDoc(options);
-
-module.exports = (app) => {
-	app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
-};
+swaggerAutogen(outputFile, endpointsFiles, doc).then(() => {
+  // eslint-disable-next-line global-require
+  require('./app');
+});
