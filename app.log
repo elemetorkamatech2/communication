@@ -1,3 +1,41 @@
 {{"level":"ERROR","time":"2023-06-01T20:18:59.557Z","pid":17132,"hostname":"ASUSelisheva","msg":"hi"}
 {"level":"ERROR","time":"2023-06-01T20:20:25.402Z","pid":16168,"hostname":"ASUSelisheva","msg":"hi"}
 {"level":"ERROR","time":"2023-06-01T20:21:31.166Z","pid":9424,"hostname":"ASUSelisheva","msg":"hi"}
+{"level":"ERROR","time":"2023-06-06T00:05:46.663Z","pid":12048,"hostname":"ASUSelisheva","msg":"hi"}
+{"level":"ERROR","time":"2023-06-06T00:07:16.970Z","pid":7520,"hostname":"ASUSelisheva","msg":"hi"}
+{"level":"ERROR","time":"2023-06-06T00:07:45.643Z","pid":21468,"hostname":"ASUSelisheva","msg":"hi"}
+{"level":"ERROR","time":"2023-06-06T00:08:06.701Z","pid":9552,"hostname":"ASUSelisheva","msg":"hi"}
+{"level":"ERROR","time":"2023-06-06T07:14:51.430Z","pid":14188,"hostname":"ASUSelisheva","msg":"hi"}
+{"level":"ERROR","time":"2023-06-06T07:24:21.556Z","pid":14576,"hostname":"ASUSelisheva","msg":"hi"}
+{"level":"INFO","time":"2023-06-06T07:24:21.627Z","pid":14576,"hostname":"ASUSelisheva","msg":"my app is listening on http://localhost:3000"}
+{"level":"ERROR","time":"2023-06-06T07:24:21.627Z","pid":14576,"hostname":"ASUSelisheva","msg":"option senewurlparser is not supported"}
+{"level":"ERROR","time":"2023-06-06T07:50:27.064Z","pid":11916,"hostname":"ASUSelisheva","msg":"hi"}
+{"level":"INFO","time":"2023-06-06T07:51:20.198Z","pid":11916,"hostname":"ASUSelisheva","msg":"my app is listening on http://localhost:3000"}
+{"level":"ERROR","time":"2023-06-06T07:51:20.201Z","pid":11916,"hostname":"ASUSelisheva","msg":"option senewurlparser is not supported"}
+{"level":"ERROR","time":"2023-06-06T07:51:29.055Z","pid":4348,"hostname":"ASUSelisheva","msg":"hi"}
+{"level":"INFO","time":"2023-06-06T07:53:12.221Z","pid":4348,"hostname":"ASUSelisheva","msg":"my app is listening on http://localhost:3000"}
+{"level":"ERROR","time":"2023-06-06T07:53:12.222Z","pid":4348,"hostname":"ASUSelisheva","msg":"option senewurlparser is not supported"}
+{"level":"ERROR","time":"2023-06-06T08:09:37.557Z","pid":16680,"hostname":"ASUSelisheva","msg":"hi"}
+{"level":"INFO","time":"2023-06-06T08:09:54.477Z","pid":16680,"hostname":"ASUSelisheva","msg":"my app is listening on http://localhost:3000"}
+{"level":"ERROR","time":"2023-06-06T08:09:54.479Z","pid":16680,"hostname":"ASUSelisheva","msg":"option senewurlparser is not supported"}
+{"level":"ERROR","time":"2023-06-06T08:46:19.943Z","pid":10264,"hostname":"ASUSelisheva","msg":"hi"}
+{"level":"INFO","time":"2023-06-06T08:46:20.192Z","pid":10264,"hostname":"ASUSelisheva","msg":"my app is listening on http://localhost:3000"}
+{"level":"ERROR","time":"2023-06-06T08:46:20.193Z","pid":10264,"hostname":"ASUSelisheva","msg":"option senewurlparser is not supported"}
+{"level":"ERROR","time":"2023-06-06T09:18:13.249Z","pid":17496,"hostname":"ASUSelisheva","msg":"hi"}
+{"level":"INFO","time":"2023-06-06T09:18:13.299Z","pid":17496,"hostname":"ASUSelisheva","msg":"my app is listening on http://localhost:3000"}
+{"level":"ERROR","time":"2023-06-06T09:18:13.299Z","pid":17496,"hostname":"ASUSelisheva","msg":"option senewurlparser is not supported"}
+{"level":"ERROR","time":"2023-06-06T09:45:43.602Z","pid":2224,"hostname":"ASUSelisheva","msg":"hi"}
+{"level":"INFO","time":"2023-06-06T09:45:43.632Z","pid":2224,"hostname":"ASUSelisheva","msg":"my app is listening on http://localhost:3000"}
+{"level":"ERROR","time":"2023-06-06T09:45:43.632Z","pid":2224,"hostname":"ASUSelisheva","msg":"option senewurlparser is not supported"}
+{"level":"ERROR","time":"2023-06-06T09:48:08.688Z","pid":10912,"hostname":"ASUSelisheva","msg":"hi"}
+{"level":"INFO","time":"2023-06-06T09:48:08.719Z","pid":10912,"hostname":"ASUSelisheva","msg":"my app is listening on http://localhost:3000"}
+{"level":"ERROR","time":"2023-06-06T09:48:08.720Z","pid":10912,"hostname":"ASUSelisheva","msg":"option senewurlparser is not supported"}
+{"level":"ERROR","time":"2023-06-06T11:29:24.949Z","pid":21452,"hostname":"ASUSelisheva","msg":"hi"}
+{"level":"INFO","time":"2023-06-06T11:29:25.010Z","pid":21452,"hostname":"ASUSelisheva","msg":"my app is listening on http://localhost:3000"}
+{"level":"ERROR","time":"2023-06-06T11:29:25.010Z","pid":21452,"hostname":"ASUSelisheva","msg":"option senewurlparser is not supported"}
+{"level":"ERROR","time":"2023-06-06T11:29:47.737Z","pid":15940,"hostname":"ASUSelisheva","msg":"hi"}
+{"level":"INFO","time":"2023-06-06T11:29:47.759Z","pid":15940,"hostname":"ASUSelisheva","msg":"my app is listening on http://localhost:3000"}
+{"level":"ERROR","time":"2023-06-06T11:29:47.759Z","pid":15940,"hostname":"ASUSelisheva","msg":"option senewurlparser is not supported"}
+{"level":"ERROR","time":"2023-06-06T12:39:32.674Z","pid":20696,"hostname":"ASUSelisheva","msg":"hi"}
+{"level":"INFO","time":"2023-06-06T12:39:32.743Z","pid":20696,"hostname":"ASUSelisheva","msg":"my app is listening on http://localhost:3000"}
+{"level":"INFO","time":"2023-06-06T12:39:32.763Z","pid":20696,"hostname":"ASUSelisheva","msg":"connect to mongoDB"}
