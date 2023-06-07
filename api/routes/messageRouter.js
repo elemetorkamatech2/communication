@@ -4,6 +4,7 @@ const {
   Delete,
 } = require('../controllers/messageController');
 
+// eslint-disable-next-line func-names
 module.exports = function (router) {
   router.get('/', getAll);
   router.post('/', createMessage);
