@@ -39,3 +39,9 @@
 {"level":"ERROR","time":"2023-06-06T12:39:32.674Z","pid":20696,"hostname":"ASUSelisheva","msg":"hi"}
 {"level":"INFO","time":"2023-06-06T12:39:32.743Z","pid":20696,"hostname":"ASUSelisheva","msg":"my app is listening on http://localhost:3000"}
 {"level":"INFO","time":"2023-06-06T12:39:32.763Z","pid":20696,"hostname":"ASUSelisheva","msg":"connect to mongoDB"}
+{"level":"ERROR","time":"2023-06-07T09:29:12.730Z","pid":14724,"hostname":"ASUSelisheva","msg":"hi"}
+{"level":"INFO","time":"2023-06-07T09:29:12.809Z","pid":14724,"hostname":"ASUSelisheva","msg":"my app is listening on http://localhost:3000"}
+{"level":"INFO","time":"2023-06-07T09:29:12.875Z","pid":14724,"hostname":"ASUSelisheva","msg":"connect to mongoDB"}
+{"level":"ERROR","time":"2023-06-08T13:22:18.126Z","pid":6780,"hostname":"ASUSelisheva","msg":"hi"}
+{"level":"INFO","time":"2023-06-08T13:22:18.172Z","pid":6780,"hostname":"ASUSelisheva","msg":"my app is listening on http://localhost:3000"}
+{"level":"INFO","time":"2023-06-08T13:22:18.234Z","pid":6780,"hostname":"ASUSelisheva","msg":"connect to mongoDB"}

@@ -28,7 +28,7 @@ const connectionParams = {
 };
 
 app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
-require('./api/routes/messageRouter')(app);
+// require('./api/routes/messageRouter')(app);
 
 mongoose
   .connect(process.env.DB_CONNECTION, connectionParams)
