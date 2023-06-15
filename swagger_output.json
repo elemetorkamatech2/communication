@@ -17,7 +17,7 @@
     "http"
   ],
   "paths": {
-    "/": {
+    "/message": {
       "get": {
         "tags": [
           "messages"
@@ -58,7 +58,7 @@
         }
       }
     },
-    "/{id}": {
+    "/message/{id}": {
       "delete": {
         "tags": [
           "messages"

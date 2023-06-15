@@ -1,12 +1,12 @@
+const router = require('express').Router();
 const {
   getAll,
   createMessage,
   Delete,
 } = require('../controllers/messageController');
 
-// eslint-disable-next-line func-names
-module.exports = function (router) {
-  router.get('/', getAll);
-  router.post('/', createMessage);
-  router.delete('/:id', Delete);
-};
+router.get('/message', getAll);
+router.post('/message', createMessage);
+router.delete('/message/:id', Delete);
+
+module.exports = router;
