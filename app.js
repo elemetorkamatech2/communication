@@ -9,11 +9,7 @@ const swaggerFile = require('./swagger_output.json');
 const logger = require('./logger');
 const messageRouter = require('./api/routes/messageRouter');
 
-// const open =require('open')
-// const Message = require("./models/message");
-
 const app = express();
-const port = 3000;
 
 app.use(bodyParser.json());
 app.use(morgan('dev'));
@@ -37,10 +33,8 @@ mongoose
   .catch((error) => {
     logger.error(error.message);
   });
-
-const server = app.listen(port, () => {
-  logger.info(`my app is listening on http://localhost:${port}`);
-  // open('http://localhost:3000/doc');
+const server = app.listen(process.env.PORT, () => {
+  logger.info(`my app is listening on http://localhost:${process.env.PORT}`);
 });
 process.on('uncaughtException', (err) => {
   logger.fatal(err, 'uncaught exception detected');
