@@ -49,7 +49,6 @@ module.exports = {
         }
     */
     try {
-    //   const { userCode, subject, body } = req.body;
       const message = new Message(req.body);
       await message.save();
       res.status(200).send({ newMessage: message });
