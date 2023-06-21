@@ -7,9 +7,9 @@ const dotenv = require('dotenv');
 const swaggerUi = require('swagger-ui-express');
 const swaggerFile = require('./swagger_output.json');
 const logger = require('./logger');
-
 // const open =require('open')
-// const messageRouter = require("./routes/messageRouter");
+
+const messageRouter = require('./api/routes/messageRouter');
 // const Message = require("./models/message");
 
 logger.error('hi');
@@ -28,7 +28,6 @@ const connectionParams = {
 };
 
 app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
-// require('./api/routes/messageRouter')(app);
 
 mongoose
   .connect(process.env.DB_CONNECTION, connectionParams)
@@ -39,7 +38,7 @@ mongoose
     logger.error(error.message);
   });
 
-// app.use("/messages", messageRouter);
+app.use(messageRouter);
 
 const server = app.listen(port, () => {
   logger.info(`my app is listening on http://localhost:${port}`);
