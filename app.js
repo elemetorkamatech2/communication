@@ -7,12 +7,8 @@ const dotenv = require('dotenv');
 const swaggerUi = require('swagger-ui-express');
 const swaggerFile = require('./swagger_output.json');
 const logger = require('./logger');
-// const open =require('open')
 
 const messageRouter = require('./api/routes/messageRouter');
-// const Message = require("./models/message");
-
-logger.error('hi');
 
 const app = express();
 const port = 3000;
@@ -42,7 +38,6 @@ app.use(messageRouter);
 
 const server = app.listen(port, () => {
   logger.info(`my app is listening on http://localhost:${port}`);
-  // open('http://localhost:3000/doc');
 });
 process.on('uncaughtException', (err) => {
   logger.fatal(err, 'uncaught exception detected');
