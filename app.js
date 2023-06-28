@@ -7,9 +7,9 @@ import dotenv from 'dotenv';
 import swaggerUi from 'swagger-ui-express';
 import { readFileSync } from 'fs';
 
-const swaggerFile = JSON.parse(readFileSync('./swagger_output.json'));
 import logger from './logger.js';
 import messageRouter from './api/routes/messageRouter.js';
+const swaggerFile = JSON.parse(readFileSync('./swagger_output.json'));
 
 const app = express();
 const port = 3000;

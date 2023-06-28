@@ -1,5 +1,3 @@
-// לא ברורות ESLint בהערה עקב שגיאות
-
 import express from 'express';
 import request from 'supertest';
 
