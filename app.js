@@ -1,14 +1,15 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const morgan = require('morgan');
-const cors = require('cors');
-const mongoose = require('mongoose');
-const dotenv = require('dotenv');
-const swaggerUi = require('swagger-ui-express');
-const swaggerFile = require('./swagger_output.json');
-const logger = require('./logger');
+import express from 'express';
+import bodyParser from 'body-parser';
+import morgan from 'morgan';
+import cors from 'cors';
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+import swaggerUi from 'swagger-ui-express';
+import { readFileSync } from 'fs';
 
-const messageRouter = require('./api/routes/messageRouter');
+const swaggerFile = JSON.parse(readFileSync('./swagger_output.json'));
+import logger from './logger.js';
+import messageRouter from './api/routes/messageRouter.js';
 
 const app = express();
 const port = 3000;

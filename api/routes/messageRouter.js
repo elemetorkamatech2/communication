@@ -1,14 +1,11 @@
-const express = require('express');
-const {
-  getAll,
-  createMessage,
-  Delete,
-} = require('../controllers/messageController');
+import express from 'express';
+
+import controller from '../controllers/messageController.js';
 
 const router = express.Router();
 
-router.get('/', getAll);
-router.post('/', createMessage);
-router.delete('/:id', Delete);
+router.get('/message', controller.getAll);
+router.delete('/message/:id', controller.deleteMessage);
+router.post('/message', controller.createMessage);
 
-module.exports = router;
+export default router;

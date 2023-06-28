@@ -1,12 +1,12 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-const swaggerAutogen = require('swagger-autogen');
+import swaggerAutogen from 'swagger-autogen';
 
 const outputFile = './swagger_output.json';
 const endpointsFiles = ['./api/routes/messageRouter'];
 const doc = {
   tags: [
     {
-      name: 'messages',
+      name: 'message',
       description: 'Operations for messages',
     },
   ],
@@ -18,7 +18,4 @@ const doc = {
     },
   },
 };
-swaggerAutogen(outputFile, endpointsFiles, doc).then(() => {
-  // eslint-disable-next-line global-require
-  require('./app');
-});
+swaggerAutogen(outputFile, endpointsFiles, doc);

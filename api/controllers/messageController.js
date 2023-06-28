@@ -1,10 +1,9 @@
-const Message = require('../models/message');
+import Message from '../models/message.js';
 
-module.exports = {
-
+export default {
   getAll: (req, res) => {
     /*
-    #swagger.tags=['messages']
+    #swagger.tags=['message']
     */
     Message.find()
       .then((messages) => {
@@ -14,9 +13,9 @@ module.exports = {
         res.status(404).send({ error: error.message });
       });
   },
-  Delete: (req, res) => {
+  deleteMessage: (req, res) => {
     /*
-      #swagger.tags=['messages']
+      #swagger.tags=['message']
     */
     Message.findById(req.params.id)
       .then((message) => {
@@ -35,12 +34,10 @@ module.exports = {
         res.status(404).send({ error: error.message });
       });
   },
-
   createMessage: async (req, res) => {
     /*
-      #swagger.tags=['messages']
+      #swagger.tags=['message']
     */
-
     /*
       #swagger.parameters['message'] = {
            in: 'body',
@@ -55,5 +52,5 @@ module.exports = {
     } catch (error) {
       res.status(400).send({ message: error.message });
     }
-  },
+  }
 };

@@ -9,7 +9,7 @@
   "basePath": "/",
   "tags": [
     {
-      "name": "messages",
+      "name": "message",
       "description": "Operations for messages"
     }
   ],
@@ -17,10 +17,10 @@
     "http"
   ],
   "paths": {
-    "/": {
+    "/message": {
       "get": {
         "tags": [
-          "messages"
+          "message"
         ],
         "description": "",
         "parameters": [],
@@ -35,7 +35,7 @@
       },
       "post": {
         "tags": [
-          "messages"
+          "message"
         ],
         "description": "",
         "parameters": [
@@ -58,10 +58,10 @@
         }
       }
     },
-    "/{id}": {
+    "/message/{id}": {
       "delete": {
         "tags": [
-          "messages"
+          "message"
         ],
         "description": "",
         "parameters": [
