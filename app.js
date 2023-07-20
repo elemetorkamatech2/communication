@@ -50,3 +50,4 @@ process.on('uncaughtException', (err) => {
   }, 1000).unref();
   process.exit(1);
 });
+
